@@ -1,12 +1,12 @@
-header
-  figure: img(src="", alt="Logo")
-  div
+header.header
+  figure.header__logo: img(src="", alt="Logo")
+  .header__mode
     label(for="ilumination-mode")
       input(type="checkbox", name="ilumination-mode")
       img(src="", alt="Mode icon")
-  div
-    span: img(src="", alt="Search icon")
-    input(type="text", name="movie-search")
-  div
-    figure: img(src="", alt="Profile icon")
-    figure: img(src="", alt="Menu")
+  .search
+    span.search__icon: img(src="", alt="Search icon")
+    form.search__form(action="", id="form"): input.seacrh__input(type="text", name="movie-search")
+  .menu
+    figure.menu__image.menu__image--profile: img(src="", alt="Profile icon")
+    figure.menu__image.menu__image--arrow-menu: img(src="", alt="Menu")

@@ -9,20 +9,35 @@
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
-    <header>
-      <figure><img src="" alt="Logo"></figure>
-      <div>
+    <header class="header">
+      <figure class="header__logo"><img src="" alt="Logo"></figure>
+      <div class="header__mode">
         <label for="ilumination-mode">
           <input type="checkbox" name="ilumination-mode"><img src="" alt="Mode icon">
         </label>
       </div>
-      <div><span><img src="" alt="Search icon"></span>
-        <input type="text" name="movie-search">
+      <div class="search"><span class="search__icon"><img src="" alt="Search icon"></span>
+        <form class="search__form" action="" id="form">
+          <input class="seacrh__input" type="text" name="movie-search">
+        </form>
       </div>
-      <div>
-        <figure><img src="" alt="Profile icon"></figure>
-        <figure><img src="" alt="Menu"></figure>
+      <div class="menu">
+        <figure class="menu__image menu__image--profile"><img src="" alt="Profile icon"></figure>
+        <figure class="menu__image menu__image--arrow-menu"><img src="" alt="Menu"></figure>
       </div>
     </header>
+    <main>
+      <section class="released-movie">
+        <figure class="released-movie__image"><img alt="released movie"></figure>
+        <div class="released-movie__description">
+          <h1 class="released-movie__title"></h1>
+          <p class="released-movie__info"></p>
+          <button class="btn btn--watch-now" type="submit"><span class="btn__text"></span></button>
+          <button class="btn btn--info" type="submit"><span class="btn__text"></span></button>
+        </div>
+      </section>
+      <section class="movies-list"></section>
+    </main>
   </body>
+  <script src="/js/script.js"></script>
 </html>
