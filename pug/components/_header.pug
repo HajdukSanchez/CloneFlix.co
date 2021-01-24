@@ -10,3 +10,9 @@ header.header
   .menu
     figure.menu__image.menu__image--profile: img(src="", alt="Profile icon")
     figure.menu__image.menu__image--arrow-menu: img(src="", alt="Menu")
+    nav.menu-box.hidden
+      ul.menu-box__nav
+        each item in items_menu
+          li.menu-box__item
+            img(src="", alt="Icon "+ item)
+            span= item
