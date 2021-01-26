@@ -1,18 +1,19 @@
-header.header
-  figure.header__logo: img(src="", alt="Logo")
-  .header__mode
-    label(for="ilumination-mode")
-      input(type="checkbox", name="ilumination-mode")
-      img(src="", alt="Mode icon")
-  .search
-    span.search__icon: img(src="", alt="Search icon")
-    form.search__form(action="", id="form"): input.seacrh__input(type="text", name="movie-search")
-  .menu
-    figure.menu__image.menu__image--profile: img(src="", alt="Profile icon")
-    figure.menu__image.menu__image--arrow-menu: img(src="", alt="Menu")
-    nav.menu-box.hidden
-      ul.menu-box__nav
-        each item in items_menu
-          li.menu-box__item
-            img(src="", alt="Icon "+ item)
-            span= item
+header
+  div.navbar
+    figure.navbar__logo: img(src="", alt="Logo")
+    .theme-mode
+      label(for="ilumination-mode")
+        input(type="checkbox", name="ilumination-mode")
+        img(src="", alt="Mode icon")
+    .search-container
+      span.search-container__icon: img(src="", alt="Search icon")
+      form.search-container__form(action="", id="form"): input.search-container__input(type="text", name="movie-search")
+    .navbar__menu-profile
+      figure.navbar__image.navbar__image--profile: img(src="", alt="Profile icon")
+      figure.navbar__image.navbar__image--arrow: img(src="", alt="Menu")
+      nav.navbar__modal.hidden
+        ul.modal__nav
+          each item in items_menu
+            li.modal__item
+              img(src="", alt="Icon "+ item)
+              span= item
