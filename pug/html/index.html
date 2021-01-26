@@ -8,5 +8,45 @@
     <title>Home | CloneFlix</title>
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="navbar">
+        <figure class="navbar__logo"><img src="" alt="Logo"></figure>
+        <div class="theme-mode">
+          <label for="ilumination-mode">
+            <input type="checkbox" name="ilumination-mode"><img src="" alt="Mode icon">
+          </label>
+        </div>
+        <div class="search-container"><span class="search-container__icon"><img src="" alt="Search icon"></span>
+          <form class="search-container__form" action="" id="form">
+            <input class="search-container__input" type="text" name="movie-search">
+          </form>
+        </div>
+        <div class="navbar__menu-profile">
+          <figure class="navbar__image navbar__image--profile"><img src="" alt="Profile icon"></figure>
+          <figure class="navbar__image navbar__image--arrow"><img src="" alt="Menu"></figure>
+          <nav class="navbar__modal hidden">
+            <ul class="modal__nav">
+              <li class="modal__item"><img src="" alt="Icon Account settings"><span>Account settings</span></li>
+              <li class="modal__item"><img src="" alt="Icon Notifications"><span>Notifications</span></li>
+              <li class="modal__item"><img src="" alt="Icon Sign Out"><span>Sign Out</span></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="top-movie">
+        <figure class="top-movie__image"><img alt="released movie"></figure>
+        <div class="top-movie__description">
+          <h1 class="top-movie__title"></h1>
+          <p class="top-movie__info"></p>
+          <button class="btn btn--watch" type="submit"><span class="btn__text"></span></button>
+          <button class="btn btn--info" type="submit"><span class="btn__text"></span></button>
+        </div>
+      </section>
+      <section class="movie-list"></section>
+    </main>
+  </body>
+  <script src="/js/script.js"></script>
 </html>
