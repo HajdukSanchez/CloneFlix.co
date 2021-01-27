@@ -9,6 +9,9 @@
   Variables
 \*************************************************************/
 /*************************************************************\
+  Mixins
+\*************************************************************/
+/*************************************************************\
   Globals
 \*************************************************************/
 /* Developed by Jozek Andrzej Hajduk Sánchez */
@@ -37,7 +40,7 @@ html {
   -ms-grid-columns: 1fr 4fr 5fr 1fr;
       grid-template: 1fr / 1fr 4fr 5fr 1fr;
   width: 100vw;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2.5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -69,16 +72,23 @@ html {
 .navbar__image {
   width: 2rem;
   margin-right: 3rem;
+  cursor: pointer;
 }
 
-.navbar__image--profile {
+.navbar__image--profile img {
   border-radius: 50%;
 }
 
 .navbar__image--arrow img {
-  padding: 1rem;
+  padding: .5rem;
   border-radius: 50%;
   border: 0.1rem solid #ececec;
+}
+
+.navbar__image--arrow img:hover {
+  border-color: #dfe1e500;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
 }
 
 .search-container {
@@ -94,15 +104,13 @@ html {
   border-radius: 2rem;
   color: #6e6e6e;
   border: 0.1rem solid #ececec;
-}
-
-.search-container__icon {
-  width: 20%;
+  -webkit-transition: width .7s;
+  transition: width .7s;
 }
 
 .search-container form {
-  width: 80%;
-  padding-left: .5rem;
+  width: 100%;
+  padding-left: 1rem;
 }
 
 .search-container__input {
@@ -110,4 +118,12 @@ html {
   outline: none;
   border: 0;
   background-color: #fbfbfb;
+  color: #6e6e6e;
+}
+
+.search-container:hover {
+  width: 40rem;
+  border-color: #dfe1e500;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
 }

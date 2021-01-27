@@ -6,7 +6,7 @@
   display: grid;
   grid-template: 1fr / 1fr 4fr 5fr 1fr;
   width: 100vw;
-  padding: 1.5rem 2.5rem;
+  padding: 1rem 2.5rem;
   align-items: center;
   position: sticky;
   top: 0;
@@ -26,14 +26,20 @@
   &__image {
     width: 2rem;
     margin-right: 3rem;
+    cursor: pointer;
     &--profile {
-      border-radius: 50%;
+      img {
+        border-radius: 50%;
+      }
     }
     &--arrow {
       img {
-        padding: 1rem;
+        padding: .5rem;
         border-radius: 50%;
         border: .1rem solid $color-border-ligth;
+        &:hover {
+          @include boxShadowLigth;
+        }
       }
     }
   }
@@ -48,17 +54,20 @@
   border-radius: 2rem;
   color: $color-text-secundary-ligth;
   border: .1rem solid $color-border-ligth;
-  &__icon {
-    width: 20%;
-  }
+  transition: width .7s; // Re-width time
   form {
-    width: 80%;
-    padding-left: .5rem;
+    width: 100%;
+    padding-left: 1rem;
   }
   &__input {
     width: 100%;
     outline: none;
     border: 0;
     background-color: $color-bg-ligth;
+    color: $color-text-secundary-ligth;
+  }
+  &:hover {
+    width: 40rem;
+    @include boxShadowLigth;
   }
 }
