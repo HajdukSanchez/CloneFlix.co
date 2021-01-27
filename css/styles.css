@@ -6,8 +6,108 @@
   Media Queries Mixin
 \*************************************************************/
 /*************************************************************\
+  Variables
+\*************************************************************/
+/*************************************************************\
   Globals
 \*************************************************************/
+/* Developed by Jozek Andrzej Hajduk Sánchez */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.hidden {
+  display: none;
+}
+
 /*************************************************************\
   Header
 \*************************************************************/
+.navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 4fr 5fr 1fr;
+      grid-template: 1fr / 1fr 4fr 5fr 1fr;
+  width: 100vw;
+  padding: 1.5rem 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fbfbfb;
+}
+
+.navbar__logo {
+  width: 20rem;
+  margin-right: 3rem;
+}
+
+.navbar__logo img {
+  width: 100%;
+}
+
+.navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__image {
+  width: 2rem;
+  margin-right: 3rem;
+}
+
+.navbar__image--profile {
+  border-radius: 50%;
+}
+
+.navbar__image--arrow img {
+  padding: 1rem;
+  border-radius: 50%;
+  border: 0.1rem solid #ececec;
+}
+
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: end;
+  width: 20rem;
+  padding: .5rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  color: #6e6e6e;
+  border: 0.1rem solid #ececec;
+}
+
+.search-container__icon {
+  width: 20%;
+}
+
+.search-container form {
+  width: 80%;
+  padding-left: .5rem;
+}
+
+.search-container__input {
+  width: 100%;
+  outline: none;
+  border: 0;
+  background-color: #fbfbfb;
+}

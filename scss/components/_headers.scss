@@ -1,0 +1,64 @@
+/*************************************************************\
+  Header
+\*************************************************************/
+
+.navbar {
+  display: grid;
+  grid-template: 1fr / 1fr 4fr 5fr 1fr;
+  width: 100vw;
+  padding: 1.5rem 2.5rem;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: $color-bg-ligth;
+  &__logo {
+    width: 20rem;
+    margin-right: 3rem;
+    img {
+      width: 100%;
+    }
+  }
+  &__menu {
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+  &__image {
+    width: 2rem;
+    margin-right: 3rem;
+    &--profile {
+      border-radius: 50%;
+    }
+    &--arrow {
+      img {
+        padding: 1rem;
+        border-radius: 50%;
+        border: .1rem solid $color-border-ligth;
+      }
+    }
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-self: end;
+  width: 20rem;
+  padding: .5rem 1rem;
+  align-items: center;
+  border-radius: 2rem;
+  color: $color-text-secundary-ligth;
+  border: .1rem solid $color-border-ligth;
+  &__icon {
+    width: 20%;
+  }
+  form {
+    width: 80%;
+    padding-left: .5rem;
+  }
+  &__input {
+    width: 100%;
+    outline: none;
+    border: 0;
+    background-color: $color-bg-ligth;
+  }
+}
