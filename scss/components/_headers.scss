@@ -8,7 +8,8 @@
   width: 100vw;
   padding: 1rem 2.5rem;
   align-items: center;
-  position: sticky;
+  position: fixed;
+  z-index: 1;
   top: 0;
   background-color: $color-bg-ligth;
   &__logo {
@@ -54,15 +55,16 @@
   border-radius: 2rem;
   color: $color-text-secundary-ligth;
   border: .1rem solid $color-border-ligth;
-  transition: width .7s; // Re-width time
+  transition: width .6s; // Re-width time
   form {
     width: 100%;
     padding-left: 1rem;
   }
   &__input {
     width: 100%;
-    outline: none;
+    font-family: $font-family;
     border: 0;
+    outline: none;
     background-color: $color-bg-ligth;
     color: $color-text-secundary-ligth;
   }

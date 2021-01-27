@@ -12,6 +12,9 @@
   Mixins
 \*************************************************************/
 /*************************************************************\
+  Functions
+\*************************************************************/
+/*************************************************************\
   Globals
 \*************************************************************/
 /* Developed by Jozek Andrzej Hajduk Sánchez */
@@ -30,6 +33,14 @@ html {
   display: none;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
 /*************************************************************\
   Header
 \*************************************************************/
@@ -44,8 +55,8 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
+  z-index: 1;
   top: 0;
   background-color: #fbfbfb;
 }
@@ -104,8 +115,8 @@ html {
   border-radius: 2rem;
   color: #6e6e6e;
   border: 0.1rem solid #ececec;
-  -webkit-transition: width .7s;
-  transition: width .7s;
+  -webkit-transition: width .6s;
+  transition: width .6s;
 }
 
 .search-container form {
@@ -115,8 +126,9 @@ html {
 
 .search-container__input {
   width: 100%;
-  outline: none;
+  font-family: Helvetica, arial, sans-serif;
   border: 0;
+  outline: none;
   background-color: #fbfbfb;
   color: #6e6e6e;
 }
@@ -126,4 +138,81 @@ html {
   border-color: #dfe1e500;
   -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
           box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+}
+
+/*************************************************************\
+  Main
+\*************************************************************/
+.top-movie {
+  width: 100vw;
+  max-height: 50vh;
+  position: relative;
+  background-color: red;
+}
+
+.top-movie__image {
+  width: 100%;
+}
+
+.top-movie__image img {
+  width: 100%;
+  max-height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.top-movie__description {
+  padding: 20rem 10rem 5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Helvetica, arial, sans-serif;
+}
+
+.top-movie__title {
+  font-size: 4.8rem;
+  margin-bottom: 3rem;
+  color: #fdfdfd;
+}
+
+.top-movie__info {
+  width: 30%;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.btn {
+  padding: .8rem 3rem;
+  margin-right: 2rem;
+  font-family: Helvetica, arial, sans-serif;
+  color: #e0e1e2;
+  border-radius: 0.8rem;
+  outline: none;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.btn--watch {
+  background-color: #eb333e;
+  border: 0;
+  -webkit-box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
+          box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
+}
+
+.btn--watch:hover {
+  background-color: #ca0614;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn--info {
+  border: 0.1rem solid #e0e1e2;
+  background-color: transparent;
+}
+
+.btn--info:hover {
+  border-color: #e0e1e2;
+  color: #3d3d3d;
+  background-color: #e0e1e2;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
