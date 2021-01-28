@@ -1,12 +1,11 @@
 /*************************************************************\
-  Main
+  Top movie section
 \*************************************************************/
 
 .top-movie {
   width: 100vw;
   max-height: $max-heigth;
   position: relative;
-  background-color: red;
   &__image {
     width: 100%;
     img {
@@ -17,18 +16,18 @@
   }
   &__description {
     padding: 20rem 10rem 5rem;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: $overlay-bg;
     font-family: $font-family;
   }
   &__title {
-    font-size: 4.8rem;
+    font-size: font-size(3.2);
     margin-bottom: 3rem;
     color: $color-text-titles;
   }
   &__info {
     width: 30%;
     margin-bottom: 3rem;
-    font-size: 1.8rem;
+    font-size: font-size(.2);
     color: white;
   }
 }

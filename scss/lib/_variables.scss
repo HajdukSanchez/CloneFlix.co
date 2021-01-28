@@ -3,7 +3,7 @@
 \*************************************************************/
 
 $color-text-titles: #fdfdfd;
-$border-radius-gender-box: .8rem;
+$border-radius-gender-box: 2rem;
 $border-radius-search: 2rem;
 $max-heigth: 50vh;
 
@@ -17,6 +17,7 @@ $color-btn-watch-bg: #eb333e;
 $color-btn-watch-bg-hover: #ca0614;
 $color-btn-add-bg: #e0e1e2;
 $color-btn-add-border: #e0e1e2;
+$color-btn-info-bg-hover: #e0e1e2;
 
 // Ligth
 $color-bg-ligth: #fbfbfb;
@@ -26,5 +27,7 @@ $color-text-genders: #393939;
 $color-border-ligth: #ececec;
 $search-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
 $gender-box-shadow: -1px 2px 59px -5px rgba(0,0,0,0.77);
+
+$overlay-bg: rgba(0, 0, 0, .3);
 
 // Dark

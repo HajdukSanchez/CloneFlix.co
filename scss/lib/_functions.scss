@@ -2,6 +2,6 @@
   Functions
 \*************************************************************/
 
-@function font-size($value) {
+@function font-size($value: 0) {
   @return $font-size + $value;
 }
