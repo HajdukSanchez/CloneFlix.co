@@ -224,6 +224,20 @@ body {
 }
 
 /*************************************************************\
+  Loadings Gif
+\*************************************************************/
+.loading {
+  position: relative;
+  top: 50vh;
+  width: 100%;
+  text-align: center;
+}
+
+.loading__icon {
+  width: 7rem;
+}
+
+/*************************************************************\
   Movie list section
 \*************************************************************/
 .movie-list {
@@ -268,9 +282,9 @@ body {
   width: 23rem;
   min-width: 20rem;
   max-width: 23rem;
-  height: 33rem;
+  height: 37rem;
   min-height: 30rem;
-  max-height: 33rem;
+  max-height: 37rem;
   border-radius: 2rem;
   background-color: red;
   -webkit-transition: .4s;
