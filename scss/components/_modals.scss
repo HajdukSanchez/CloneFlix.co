@@ -1,0 +1,40 @@
+/*************************************************************\
+  Modals
+\*************************************************************/
+
+.modal {
+  position: absolute;
+  top: 8rem;
+  right: 2rem;
+  margin-right: 2rem;
+  padding: 1rem 2rem;
+  background-color: $color-bg-ligth;
+  border-radius: $border-radius-gender-box;
+  font-family: $font-family;
+  transition: .4s;
+  &__list {
+    font-size: font-size();
+    list-style: none;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    border-bottom: .1rem solid $color-border-ligth;
+    cursor: pointer;
+    transition: .4s;
+    span {
+      padding-left: 1rem;
+    }
+    &:hover{
+      border-bottom: .1rem solid $color-text-genders;
+      span {
+        color: $color-text-secundary-ligth;
+      }
+    }
+  }
+  &:hover {
+    @include boxShadowLigth;
+  }
+}

@@ -333,3 +333,57 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+
+/*************************************************************\
+  Modals
+\*************************************************************/
+.modal {
+  position: absolute;
+  top: 8rem;
+  right: 2rem;
+  margin-right: 2rem;
+  padding: 1rem 2rem;
+  background-color: #fbfbfb;
+  border-radius: 2rem;
+  font-family: Helvetica, arial, sans-serif;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.modal__list {
+  font-size: 1.6rem;
+  list-style: none;
+}
+
+.modal__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid #ececec;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.modal__item span {
+  padding-left: 1rem;
+}
+
+.modal__item:hover {
+  border-bottom: 0.1rem solid #393939;
+}
+
+.modal__item:hover span {
+  color: #6e6e6e;
+}
+
+.modal:hover {
+  border-color: #dfe1e500;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+}
