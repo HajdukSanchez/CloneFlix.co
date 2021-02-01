@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="description" content="#{description}">
+    <title>Home | CloneFlix</title>
+    <link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <!-- Header section -->
+    <header class="navbar">
+      <figure class="navbar__logo"><img src="https://fontmeme.com/permalink/210127/bc974caa36cb1a9d14685d59a28594c3.png" alt="Logo"></figure>
+      <div class="slidebar">
+        <label for="ilumination-mode" class="btn-switch">
+          <input type="checkbox" name="ilumination-mode"><span class="slide round"></span>
+        </label>
+      </div>
+      <div class="search-container"><span class="search-container__icon"><img src="/assets/icono_search.png" alt="Search icon"></span>
+        <form id="form">
+          <input class="search-container__input" type="text" name="movie-search" placeholder="Search">
+        </form>
+      </div>
+      <div class="navbar__menu">
+        <figure class="navbar__image navbar__image--profile"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_oESw-R4r2HrlxwyeTwDT2VhuBAYdX1PVQKtiuJzI=s32-c-mo" alt="Profile icon"></figure>
+        <figure class="navbar__image navbar__image--arrow"><img src="/assets/icon-menu.png" alt="Menu"></figure>
+        <!-- Modal nav bar menu -->
+        <div class="modal hidden">
+          <ul class="modal__list">
+            <li class="modal__item"><img src="/assets/icon_modal--settings.png" alt="Icon Account settings"><span>Account settings</span></li>
+            <li class="modal__item"><img src="/assets/icon_modal--Notification.png" alt="Icon Notifications"><span>Notifications</span></li>
+            <li class="modal__item"><img src="/assets/icon_modal--logOut.png" alt="Icon Sign Out"><span>Sign Out</span></li>
+          </ul>
+        </div>
+        <!-- / Modal nav bar menu -->
+      </div>
+    </header>
+    <!-- / Header section -->
+    <!-- Top movie section -->
+    <main class="top-movie">
+      <figure class="top-movie__image"><img src="" alt="Released movie"></figure>
+      <div class="top-movie__description overlay">
+        <h1 class="top-movie__title"></h1>
+        <p class="top-movie__info"></p>
+        <button class="btn btn--watch" type="submit"></button>
+        <button class="btn btn--info" type="submit"></button>
+      </div>
+    </main>
+    <!-- /Top movie section -->
+    <!-- Loading division -->
+    <figure class="loading hidden">
+      <img src="https://www.daevi.net/wp-content/plugins/bbpowerpack/assets/images/spinner.gif" alt="Loading Icon" class="loading__icon">
+    </figure>
+    <!-- / Loading division -->
+    <!-- Movie list section -->
+    <section class="movie-list">
+      <div class="movies">
+        <h1 class="movies__gender-title">Popular movies</h1>
+        <div class="movies__container">
+          <figure class="movie">
+            <img src="" alt="Movie">
+            <div class="overlay movie__info">
+              <button class="btn--info" title="Movie Info">
+                <img src="/assets/icon_movie__info.png" alt="Movie Info">
+              </button>
+              <h4>Este es el nombre de la película</h4>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- /Movie list section -->
+    <script src="/js/srcipt.js"></script>
+  </body>
+</html>
