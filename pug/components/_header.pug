@@ -1,0 +1,18 @@
+header.navbar
+  figure.navbar__logo: img(src="", alt="Logo")
+  .slidebar
+    label(for="ilumination-mode")
+      input(type="checkbox", name="ilumination-mode")
+      span
+  .search-container
+    span.search-container__icon: img(src="", alt="Search icon")
+    form(action="", id="form"): input.search-container__input(type="text", name="movie-search")
+  .navbar__menu
+    figure.navbar__image.navbar__image--profile: img(src="", alt="Profile icon")
+    figure.navbar__image.navbar__image--arrow: img(src="", alt="Menu")
+    .navbar__modal.hidden
+      ul.modal__list
+        each item in items_menu
+          li.modal__item
+            img(src="", alt="Icon "+ item)
+            span= item

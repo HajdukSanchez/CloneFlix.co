@@ -1,0 +1,401 @@
+@charset "UTF-8";
+/*************************************************************\
+  Developer by Jozek Andrzej Hajduk Sánchez
+\*************************************************************/
+/*************************************************************\
+  Media Queries Mixin
+\*************************************************************/
+/*************************************************************\
+  Variables
+\*************************************************************/
+/*************************************************************\
+  Mixins
+\*************************************************************/
+/*************************************************************\
+  Functions
+\*************************************************************/
+/*************************************************************\
+  Globals
+\*************************************************************/
+/* Developed by Jozek Andrzej Hajduk Sánchez */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  border: 0;
+  right: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/*************************************************************\
+  Header section
+\*************************************************************/
+.navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 4fr 5fr 1fr;
+      grid-template: 1fr / 1fr 4fr 5fr 1fr;
+  width: 100vw;
+  padding: 1rem 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #fbfbfb;
+}
+
+.navbar__logo {
+  width: 20rem;
+  margin-right: 3rem;
+}
+
+.navbar__logo img {
+  width: 100%;
+}
+
+.navbar__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__image {
+  width: 2rem;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.navbar__image--profile img {
+  border-radius: 50%;
+}
+
+.navbar__image--arrow img {
+  padding: .5rem;
+  border-radius: 50%;
+  border: 0.1rem solid #ececec;
+}
+
+.navbar__image--arrow img:hover {
+  border-color: #dfe1e500;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+}
+
+.search-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: end;
+  width: 20rem;
+  padding: .5rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 2rem;
+  color: #6e6e6e;
+  border: 0.1rem solid #ececec;
+  -webkit-transition: width .6s;
+  transition: width .6s;
+}
+
+.search-container form {
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.search-container__input {
+  width: 100%;
+  font-family: Helvetica, arial, sans-serif;
+  border: 0;
+  outline: none;
+  background-color: #fbfbfb;
+  color: #6e6e6e;
+}
+
+.search-container:hover {
+  width: 40rem;
+  border-color: #dfe1e500;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+}
+
+/*************************************************************\
+  Top movie section
+\*************************************************************/
+.top-movie {
+  width: 100vw;
+  max-height: 50vh;
+  position: relative;
+}
+
+.top-movie__image {
+  width: 100%;
+}
+
+.top-movie__image img {
+  width: 100%;
+  max-height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.top-movie__description {
+  padding: 20rem 10rem 5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: Helvetica, arial, sans-serif;
+}
+
+.top-movie__title {
+  font-size: 4.8rem;
+  margin-bottom: 3rem;
+  color: #fdfdfd;
+}
+
+.top-movie__info {
+  width: 30%;
+  margin-bottom: 3rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+.btn {
+  padding: .8rem 3rem;
+  margin-right: 2rem;
+  font-family: Helvetica, arial, sans-serif;
+  color: #e0e1e2;
+  border-radius: 2rem;
+  outline: none;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.btn--watch {
+  background-color: #eb333e;
+  border: 0;
+  -webkit-box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
+          box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
+}
+
+.btn--watch:hover {
+  background-color: #ca0614;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.btn--info {
+  border: 0.1rem solid #e0e1e2;
+  background-color: transparent;
+}
+
+.btn--info:hover {
+  border-color: #e0e1e2;
+  color: #3d3d3d;
+  background-color: #e0e1e2;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/*************************************************************\
+  Loadings Gif
+\*************************************************************/
+.loading {
+  position: relative;
+  top: 50vh;
+  width: 100%;
+  text-align: center;
+}
+
+.loading__icon {
+  width: 7rem;
+}
+
+/*************************************************************\
+  Movie list section
+\*************************************************************/
+.movie-list {
+  padding: 10rem 10rem 1rem;
+  width: 100vw;
+  position: relative;
+  top: 50vh;
+  background-color: #fbfbfb;
+}
+
+.movies {
+  position: relative;
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+  border-top: 0.2rem solid #ececec;
+}
+
+.movies__gender-title {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  position: absolute;
+  top: -2.5rem;
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 1.6rem;
+  background-color: #fbfbfb;
+}
+
+.movies__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem 0 2rem 3rem;
+  width: 105%;
+  background-color: transparent;
+  border-radius: 2rem;
+  overflow-x: scroll;
+}
+
+.movie {
+  margin-right: 2rem;
+  position: relative;
+  width: 23rem;
+  min-width: 20rem;
+  max-width: 23rem;
+  height: 37rem;
+  min-height: 30rem;
+  max-height: 37rem;
+  border-radius: 2rem;
+  background-color: red;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.movie:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  border-color: #dfe1e500;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.movie__info {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: inherit;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.movie__info .btn--info {
+  border: 0;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.movie__info h4 {
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: Helvetica, arial, sans-serif;
+  text-align: center;
+  color: #fbfbfb;
+}
+
+.movie:hover .movie__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*************************************************************\
+  Modals
+\*************************************************************/
+.modal {
+  position: absolute;
+  top: 8rem;
+  right: 2rem;
+  margin-right: 2rem;
+  padding: 1rem 2rem;
+  background-color: #fbfbfb;
+  border-radius: 2rem;
+  font-family: Helvetica, arial, sans-serif;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.modal__list {
+  font-size: 1.6rem;
+  list-style: none;
+}
+
+.modal__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
+  border-bottom: 0.1rem solid #ececec;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.modal__item span {
+  padding-left: 1rem;
+}
+
+.modal__item:hover {
+  border-bottom: 0.1rem solid #393939;
+}
+
+.modal__item:hover span {
+  color: #6e6e6e;
+}
+
+.modal:hover {
+  border-color: #dfe1e500;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+}

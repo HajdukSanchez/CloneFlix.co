@@ -1,6 +1,6 @@
 //- Developer by Jozek Andrzej Hajduk Sánchez
-//- include lib/variables.pug
-//- include lib/mixins.pug
+include lib/_variables.pug
+//- include lib/_mixins.pug
 doctype html
 html(lang='en')
   head
@@ -9,5 +9,8 @@ html(lang='en')
     meta(name='robots', content='index,follow')
     meta(name='description', content='#{description}')
     title Home | CloneFlix
-    link(rel='stylesheet', href='css/styles.css')
+    link(rel='stylesheet', href='/css/styles.css')
   body
+    include components/_header.pug
+    include components/_main.pug
+    script(src="/js/script.js")

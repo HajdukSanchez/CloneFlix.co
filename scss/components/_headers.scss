@@ -1,0 +1,75 @@
+/*************************************************************\
+  Header section
+\*************************************************************/
+
+.navbar {
+  display: grid;
+  grid-template: 1fr / 1fr 4fr 5fr 1fr;
+  width: 100vw;
+  padding: 1rem 2.5rem;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: $color-bg-ligth;
+  &__logo {
+    width: 20rem;
+    margin-right: 3rem;
+    img {
+      width: 100%;
+    }
+  }
+  &__menu {
+    display: flex;
+    justify-self: end;
+    align-items: center;
+  }
+  &__image {
+    width: 2rem;
+    margin-right: 3rem;
+    cursor: pointer;
+    &--profile {
+      img {
+        border-radius: 50%;
+      }
+    }
+    &--arrow {
+      img {
+        padding: .5rem;
+        border-radius: 50%;
+        border: .1rem solid $color-border-ligth;
+        &:hover {
+          @include boxShadowLigth;
+        }
+      }
+    }
+  }
+}
+
+.search-container {
+  display: flex;
+  justify-self: end;
+  width: 20rem;
+  padding: .5rem 1rem;
+  align-items: center;
+  border-radius: 2rem;
+  color: $color-text-secundary-ligth;
+  border: .1rem solid $color-border-ligth;
+  transition: width .6s; // Re-width time
+  form {
+    width: 100%;
+    padding-left: 1rem;
+  }
+  &__input {
+    width: 100%;
+    font-family: $font-family;
+    border: 0;
+    outline: none;
+    background-color: $color-bg-ligth;
+    color: $color-text-secundary-ligth;
+  }
+  &:hover {
+    width: 40rem;
+    @include boxShadowLigth;
+  }
+}
