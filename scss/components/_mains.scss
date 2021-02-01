@@ -9,17 +9,19 @@
     width: 100%;
     img {
       width: 100%;
-      max-height: $max-heigth;
+      height: 50vh;
+      max-height: 60vh;
       object-fit: cover;
     }
   }
   &__description {
-    padding: 16rem 10rem 9rem;
+    padding: 0 11rem;
     background-color: $overlay-bg;
     font-family: $font-family;
   }
   &__title {
     font-size: font-size(3.2);
+    padding-top: 13rem;
     padding-bottom: 3rem;
     color: $color-text-titles;
   }

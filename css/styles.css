@@ -161,19 +161,21 @@ body {
 
 .top-movie__image img {
   width: 100%;
-  max-height: 50vh;
+  height: 50vh;
+  max-height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
 .top-movie__description {
-  padding: 16rem 10rem 9rem;
+  padding: 0 11rem;
   background-color: rgba(0, 0, 0, 0.3);
   font-family: Helvetica, arial, sans-serif;
 }
 
 .top-movie__title {
   font-size: 4.8rem;
+  padding-top: 13rem;
   padding-bottom: 3rem;
   color: #fdfdfd;
 }
@@ -240,7 +242,7 @@ body {
   Movie list section
 \*************************************************************/
 .movie-list {
-  padding: 10rem 10rem 1rem;
+  padding: 10rem 10rem 1rem 2rem;
   width: 100vw;
   position: relative;
   background-color: #fbfbfb;
@@ -249,13 +251,14 @@ body {
 .movies {
   position: relative;
   padding-top: 1rem;
+  padding-left: .5rem;
   margin-bottom: 3rem;
   border-top: 0.2rem solid #ececec;
 }
 
 .movies__gender-title {
   display: inline-block;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 5rem 0 16rem;
   position: absolute;
   top: -2.5rem;
   font-family: Helvetica, arial, sans-serif;
@@ -267,11 +270,32 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: .5rem;
   padding: 3rem 0 2rem 3rem;
   width: 105%;
   background-color: transparent;
   border-radius: 2rem;
   overflow-x: auto;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+.movies__container::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.movies__container::-webkit-scrollbar-track {
+  background: #ececec;
+}
+
+.movies__container::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+  border-radius: 2rem;
+}
+
+.movies__container::-webkit-scrollbar-thumb:hover {
+  background: #888888;
 }
 
 .movie {
@@ -284,7 +308,6 @@ body {
   min-height: 30rem;
   max-height: 37rem;
   border-radius: 2rem;
-  background-color: red;
   -webkit-transition: .4s;
   transition: .4s;
 }
