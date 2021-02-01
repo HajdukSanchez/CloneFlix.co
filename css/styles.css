@@ -328,10 +328,22 @@ body {
   transition: .4s;
 }
 
+.movie__info h4 {
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-family: Helvetica, arial, sans-serif;
+  text-align: center;
+  color: #fbfbfb;
+}
+
 .movie:hover .movie__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 /*************************************************************\

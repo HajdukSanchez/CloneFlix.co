@@ -33,10 +33,8 @@
             <li class="modal__item"><img src="/assets/icon_modal--logOut.png" alt="Icon Sign Out"><span>Sign Out</span></li>
           </ul>
         </div>
-        <!-- / Modal nav bar menu -->
       </div>
     </header>
-    <!-- / Header section -->
     <!-- Top movie section -->
     <main class="top-movie">
       <figure class="top-movie__image"><img src="" alt="Released movie"></figure>
@@ -47,30 +45,14 @@
         <button class="btn btn--info" type="submit"></button>
       </div>
     </main>
-    <!-- /Top movie section -->
     <!-- Loading division -->
-    <figure class="loading hidden">
+    <figure class="loading" id="loading">
       <img src="https://www.daevi.net/wp-content/plugins/bbpowerpack/assets/images/spinner.gif" alt="Loading Icon" class="loading__icon">
     </figure>
-    <!-- / Loading division -->
     <!-- Movie list section -->
-    <section class="movie-list">
-      <div class="movies">
-        <h1 class="movies__gender-title">Popular movies</h1>
-        <div class="movies__container">
-          <figure class="movie">
-            <img src="" alt="Movie">
-            <div class="overlay movie__info">
-              <button class="btn--info" title="Movie Info">
-                <img src="/assets/icon_movie__info.png" alt="Movie Info">
-              </button>
-              <h4>Este es el nombre de la película</h4>
-            </div>
-          </figure>
-        </div>
-      </div>
+    <section class="movie-list hidden" id="movies-list">
+      <!-- Genders list here -->
     </section>
-    <!-- /Movie list section -->
     <script src="/js/srcipt.js"></script>
   </body>
 </html>
