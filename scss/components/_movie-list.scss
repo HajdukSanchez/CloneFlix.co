@@ -69,8 +69,16 @@
       cursor: pointer;
       transition: .4s;
     }
+    h4 {
+      padding: 1rem;
+      font-size: font-size();
+      font-family: $font-family;
+      text-align: center;
+      color: $color-bg-ligth;
+    }
   }
   &:hover &__info {
     display: flex;
+    flex-direction: column;
   }
 }
