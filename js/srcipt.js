@@ -1,4 +1,5 @@
-// Developed by Jozek Andrzej Hajduk Sánchez
+// Developed by Jozek Andrzej Hajduk Sánchez}
+// Function when the page is loaded
 (async function load() {
   // Remove local storage content
   window.localStorage.clear();
@@ -6,21 +7,23 @@
   const GENDERS = ['action', 'adventure', 'animation', 'biography', 'comedy', 'crime', 'documentary', 'drama', 'family', 'fantasy', 'film-noir', 'history', 'horror', 'music', 'musical', 'mystery', 'romance', 'sci-fi', 'short-film', 'sport', 'superhero', 'thriller', 'war', 'western'];
   // Link for all the movies
   const API_GENDERS_URL = 'https://yts.mx/api/v2/list_movies.json?limit=50&genre=';
+  // Link for movie suggestion
+  const API_MOVIE_SUGGESTION = 'https://yts.mx/api/v2/movie_suggestions.json?movie_id=';
   // Movies lists container
   const $movies_list_container = document.getElementById('movies-list');
   // Loading Gif
   const $loading = document.getElementById('loading');
+  // Principal movie
+  const $main_movie_container = document.getElementById('main-movie');
 
   // Funtion to get data for the API
   async function getData(url) {
     const response = await fetch(url);
     const data = await response.json();
-    if (data.data.movie_count > 0) {
-      return data;
-    } else {
-      console.log('No hubo resultado de la búsqueda');
-    }
+    return data;
   }
+
+  // Cache saved on localStorage
   async function cacheExist(category) {
     const cahceList = window.localStorage.getItem(category + '_list')
     if (cahceList) {
@@ -31,7 +34,7 @@
       return data;
     }
   }
-
+  // HTML Templates
   function listTemplate(category) {
     return (
       `<div class="movies">
@@ -47,12 +50,25 @@
       `<figure class="movie" data-id=${movie.id} data-category=${category}>
         <img src="${movie.large_cover_image}" alt="Movie">
         <div class="overlay movie__info">
-          <button class="btn--info" title="Movie Info">
-            <img src="/assets/icon_movie__info.png" alt="Movie Info">
+          <button class="btn--info" title="Movie information">
+            <img src="/assets/icon_movie__info.png" alt="Information about the movie">
           </button>
           <h4>${movie.title_english}</h4>
         </div>
       </figure>`
+    );
+  }
+  function principalMovieTemplate(movie) {
+    return (
+      `<figure class="top-movie__image">
+        <img src="${movie.background_image}" alt="Released movie">
+      </figure>
+      <div class="top-movie__description overlay" data-id=${movie.id} data-category=${movie.genres[0]}>
+        <h1 class="top-movie__title">${movie.title_english}</h1>
+        <p class="top-movie__info">${movie.synopsis}</p>
+        <button class="btn btn--watch" type="submit">Watch Now</button>
+        <button class="btn btn--info" type="submit">Add to Watchlist</button>
+      </div>`
     );
   }
   // Render the movies for the genders
@@ -75,6 +91,19 @@
       renderMovies();
     });
   }
+  // Aleatory number start - end
+  function aleatoryNumber(start, end) {
+    return Math.floor(Math.random() * end) + start;
+  }
+  // Render the principal movie information
+  async function renderPrincipalMovie() {
+    // Aleatory number 1 - 10
+    const {data:{movies: data}} = await getData(`${API_MOVIE_SUGGESTION}${aleatoryNumber(1, 1000)}`);
+    const HTMLMainMovie = principalMovieTemplate(data[aleatoryNumber(0, data.length)]);
+    $main_movie_container.innerHTML += HTMLMainMovie;
+  }
+
+  renderPrincipalMovie();
   await renderGendersList();
   setTimeout(() => {
     // Hide loading gif and show movies
