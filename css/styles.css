@@ -152,7 +152,6 @@ body {
 \*************************************************************/
 .top-movie {
   width: 100vw;
-  max-height: 50vh;
   position: relative;
 }
 
@@ -168,20 +167,20 @@ body {
 }
 
 .top-movie__description {
-  padding: 20rem 10rem 5rem;
+  padding: 16rem 10rem 9rem;
   background-color: rgba(0, 0, 0, 0.3);
   font-family: Helvetica, arial, sans-serif;
 }
 
 .top-movie__title {
   font-size: 4.8rem;
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
   color: #fdfdfd;
 }
 
 .top-movie__info {
-  width: 30%;
-  margin-bottom: 3rem;
+  width: 45%;
+  padding-bottom: 3rem;
   font-size: 1.8rem;
   color: white;
 }
@@ -244,7 +243,6 @@ body {
   padding: 10rem 10rem 1rem;
   width: 100vw;
   position: relative;
-  top: 50vh;
   background-color: #fbfbfb;
 }
 
@@ -273,7 +271,7 @@ body {
   width: 105%;
   background-color: transparent;
   border-radius: 2rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .movie {

@@ -6,7 +6,6 @@
   padding: 10rem 10rem 1rem;
   width: 100vw;
   position: relative;
-  top: 50vh;
   background-color: $color-bg-ligth;
 }
 
@@ -30,7 +29,7 @@
     width: 105%;
     background-color: transparent;
     border-radius: $border-radius-gender-box;
-    overflow-x: scroll;
+    overflow-x: auto;
   }
 }
 
