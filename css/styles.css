@@ -341,6 +341,7 @@ body {
 }
 
 .movie__info .btn--info {
+  width: 3rem;
   border: 0;
   background-color: transparent;
   outline: none;
