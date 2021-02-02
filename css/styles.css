@@ -167,6 +167,55 @@ body {
 }
 
 /*************************************************************\
+  Slider ilumitaion mode
+\*************************************************************/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 1.5rem;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #6e6e6e;
+  border: 0.1rem solid #ececec;
+  cursor: pointer;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch .slider::before {
+  content: "";
+  position: absolute;
+  bottom: -.3rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: #ca0614;
+  border-radius: inherit;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #ececec;
+}
+
+.switch input:checked + .slider::before {
+  -webkit-transform: translateX(2.5rem);
+          transform: translateX(2.5rem);
+  background-color: #eb333e;
+}
+
+/*************************************************************\
   Top movie section
 \*************************************************************/
 .top-movie {
