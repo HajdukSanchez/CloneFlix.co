@@ -15,6 +15,11 @@
   const $loading = document.getElementById('loading');
   // Principal movie
   const $main_movie_container = document.getElementById('main-movie');
+  // Menu button
+  const $menu = document.getElementById('menu');
+  // Modal menu
+  const $modal_menu = document.getElementById('modal-menu');
+
 
   // Funtion to get data for the API
   async function getData(url) {
@@ -102,6 +107,14 @@
     const HTMLMainMovie = principalMovieTemplate(data[aleatoryNumber(0, data.length)]);
     $main_movie_container.innerHTML += HTMLMainMovie;
   }
+  // For show modal
+  $menu.addEventListener('click', () => {
+    if ($modal_menu.classList.contains('hidden')) {
+      $modal_menu.classList.remove('hidden');
+    } else {
+      $modal_menu.classList.add('hidden');
+    }
+  })
 
   renderPrincipalMovie();
   await renderGendersList();
