@@ -29,6 +29,23 @@ html {
   font-size: 62.5%;
 }
 
+html::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #ececec;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+  border-radius: 2rem;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
+
 body {
   position: absolute;
   top: 0;
@@ -66,6 +83,8 @@ body {
   z-index: 1;
   top: 0;
   background-color: #fbfbfb;
+  -webkit-box-shadow: 0.3rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.62);
+          box-shadow: 0.3rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.62);
 }
 
 .navbar__logo {
@@ -251,7 +270,6 @@ body {
 .movies {
   position: relative;
   padding-top: 1rem;
-  padding-left: .5rem;
   margin-bottom: 3rem;
   border-top: 0.2rem solid #ececec;
 }
@@ -287,6 +305,7 @@ body {
 
 .movies__container::-webkit-scrollbar-track {
   background: #ececec;
+  border-radius: 2rem;
 }
 
 .movies__container::-webkit-scrollbar-thumb {
