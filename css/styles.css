@@ -8,12 +8,169 @@
 /*************************************************************\
   Variables
 \*************************************************************/
+/* ***********************************************
+  Globals
+*********************************************** */
+/* ***********************************************
+  Ligth
+*********************************************** */
+/* ***********************************************
+  Dark
+*********************************************** */
 /*************************************************************\
   Mixins
 \*************************************************************/
 /*************************************************************\
   Functions
 \*************************************************************/
+/*************************************************************\
+  Ilumination mode clasess
+\*************************************************************/
+.ligth html::-webkit-scrollbar-track {
+  background: #ececec;
+}
+
+.ligth .navbar {
+  background-color: #fbfbfb;
+}
+
+.ligth .navbar__image--arow img {
+  border: 0.1rem solid #ececec;
+}
+
+.ligth .search-container {
+  color: #6e6e6e;
+  border: 0.1rem solid #ececec;
+}
+
+.ligth .search-container__input {
+  background-color: #fbfbfb;
+  color: #6e6e6e;
+}
+
+.ligth .slider {
+  background-color: #6e6e6e;
+  border: 0.1rem solid #ececec;
+}
+
+.ligth .slider::before {
+  background-color: #ca0614;
+}
+
+.ligth input:checked + .slider {
+  background-color: #ececec;
+}
+
+.ligth input:checked + .slider::before {
+  background-color: #eb333e;
+}
+
+.ligth .btn--watch {
+  -webkit-box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
+          box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
+}
+
+.ligth .movie-list {
+  background-color: #fbfbfb;
+}
+
+.ligth .movies {
+  border-top: 0.2rem solid #ececec;
+}
+
+.ligth .movies__gender-title {
+  background-color: #fbfbfb;
+}
+
+.ligth .movie__info h4 {
+  color: #fbfbfb;
+}
+
+.ligth .modal {
+  background-color: #fbfbfb;
+}
+
+.ligth .modal__item {
+  border-bottom: 0.1rem solid #ececec;
+}
+
+.ligth .modal__item:hover span {
+  color: #6e6e6e;
+}
+
+.dark html::-webkit-scrollbar-track {
+  background: #242526;
+}
+
+.dark .navbar {
+  background-color: #18191a;
+}
+
+.dark .navbar__image--arow img {
+  border: 0.1rem solid #3a3b3c;
+}
+
+.dark .search-container {
+  background-color: #3a3b3c;
+  color: #b0b3b8;
+  border: 0.1rem solid #3a3b3c;
+}
+
+.dark .search-container__input {
+  background-color: #3a3b3c;
+  color: #b0b3b8;
+}
+
+.dark .slider {
+  background-color: #6e6e6e;
+  border: 0.1rem solid #3a3b3c;
+}
+
+.dark .slider::before {
+  background-color: #ca0614;
+}
+
+.dark input:checked + .slider {
+  background-color: #6e6e6e;
+}
+
+.dark input:checked + .slider::before {
+  background-color: #ca0614;
+}
+
+.dark .btn--watch {
+  -webkit-box-shadow: -1px 2px 59px -5px #e4e6eb;
+          box-shadow: -1px 2px 59px -5px #e4e6eb;
+}
+
+.dark .movie-list {
+  background-color: #18191a;
+}
+
+.dark .movies {
+  border-top: 0.2rem solid #3a3b3c;
+}
+
+.dark .movies__gender-title {
+  background-color: #18191a;
+}
+
+.dark .movie__info h4 {
+  color: #18191a;
+}
+
+.dark .modal {
+  background-color: #fbfbfb;
+}
+
+.dark .modal__item {
+  border-bottom: 0.1rem solid #ececec;
+}
+
+.dark .modal__item:hover span {
+  color: #6e6e6e;
+}
+
 /*************************************************************\
   Globals
 \*************************************************************/
@@ -27,14 +184,12 @@
 
 html {
   font-size: 62.5%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 html::-webkit-scrollbar {
   width: 1.3rem;
-}
-
-html::-webkit-scrollbar-track {
-  background: #ececec;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -82,7 +237,6 @@ body {
   position: fixed;
   z-index: 1;
   top: 0;
-  background-color: #fbfbfb;
   -webkit-box-shadow: 0.3rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.62);
           box-shadow: 0.3rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.62);
 }
@@ -119,7 +273,6 @@ body {
 .navbar__image--arrow img {
   padding: .5rem;
   border-radius: 50%;
-  border: 0.1rem solid #ececec;
 }
 
 .navbar__image--arrow img:hover {
@@ -139,8 +292,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 2rem;
-  color: #6e6e6e;
-  border: 0.1rem solid #ececec;
   -webkit-transition: width .6s;
   transition: width .6s;
 }
@@ -155,8 +306,6 @@ body {
   font-family: Helvetica, arial, sans-serif;
   border: 0;
   outline: none;
-  background-color: #fbfbfb;
-  color: #6e6e6e;
 }
 
 .search-container:hover {
@@ -187,7 +336,6 @@ body {
   right: 0;
   bottom: 0;
   background-color: #6e6e6e;
-  border: 0.1rem solid #ececec;
   border-radius: 2rem;
   cursor: pointer;
   -webkit-transition: .4s;
@@ -206,14 +354,9 @@ body {
   transition: .4s;
 }
 
-.switch input:checked + .slider {
-  background-color: #ececec;
-}
-
 .switch input:checked + .slider::before {
   -webkit-transform: translateX(2.5rem);
           transform: translateX(2.5rem);
-  background-color: #eb333e;
 }
 
 /*************************************************************\
@@ -238,8 +381,8 @@ body {
 
 .top-movie__description {
   padding: 0 11rem;
-  background-color: rgba(0, 0, 0, 0.3);
   font-family: Helvetica, arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .top-movie__title {
@@ -253,7 +396,7 @@ body {
   width: 45%;
   padding-bottom: 3rem;
   font-size: 1.8rem;
-  color: white;
+  color: #fdfdfd;
 }
 
 .btn {
@@ -270,8 +413,6 @@ body {
 .btn--watch {
   background-color: #eb333e;
   border: 0;
-  -webkit-box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
-          box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
 }
 
 .btn--watch:hover {
@@ -314,14 +455,12 @@ body {
   padding: 10rem 10rem 1rem 2rem;
   width: 100vw;
   position: relative;
-  background-color: #fbfbfb;
 }
 
 .movies {
   position: relative;
   padding-top: 1rem;
   margin-bottom: 3rem;
-  border-top: 0.2rem solid #ececec;
 }
 
 .movies__gender-title {
@@ -331,7 +470,6 @@ body {
   top: -2.5rem;
   font-family: Helvetica, arial, sans-serif;
   font-size: 1.6rem;
-  background-color: #fbfbfb;
 }
 
 .movies__container {
@@ -344,9 +482,6 @@ body {
   background-color: transparent;
   border-radius: 2rem;
   overflow-x: auto;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
 
 .movies__container::-webkit-scrollbar {
@@ -354,7 +489,6 @@ body {
 }
 
 .movies__container::-webkit-scrollbar-track {
-  background: #ececec;
   border-radius: 2rem;
 }
 
@@ -424,7 +558,6 @@ body {
   font-size: 1.6rem;
   font-family: Helvetica, arial, sans-serif;
   text-align: center;
-  color: #fbfbfb;
 }
 
 .movie:hover .movie__info {
@@ -446,7 +579,6 @@ body {
   right: 2rem;
   margin-right: 2rem;
   padding: 1rem 2rem;
-  background-color: #fbfbfb;
   border-radius: 2rem;
   font-family: Helvetica, arial, sans-serif;
   -webkit-transition: .4s;
@@ -467,7 +599,6 @@ body {
           align-items: center;
   margin-bottom: 1rem;
   padding: 1rem 0;
-  border-bottom: 0.1rem solid #ececec;
   cursor: pointer;
   -webkit-transition: .4s;
   transition: .4s;
@@ -475,14 +606,6 @@ body {
 
 .modal__item span {
   padding-left: 1rem;
-}
-
-.modal__item:hover {
-  border-bottom: 0.1rem solid #393939;
-}
-
-.modal__item:hover span {
-  color: #6e6e6e;
 }
 
 .modal:hover {

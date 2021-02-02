@@ -16,8 +16,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $color-text-secundary-ligth;
-    border: .1rem solid $color-border-ligth;
+    background-color: $color-slider-bg-dark;
     border-radius: 2rem;
     cursor: pointer;
     transition: .4s;
@@ -27,16 +26,12 @@
       bottom: -.3rem;
       width: 2rem;
       height: 2rem;
-      background-color: $color-btn-watch-bg-hover;
+      background-color: $color-slider-btn-dark;
       border-radius: inherit;
       transition: .4s;
     }
   }
-  input:checked + .slider {
-    background-color: $color-border-ligth;
-  }
   input:checked + .slider::before {
     transform: translateX(2.5rem);
-    background-color: $color-btn-watch-bg;
   }
 }

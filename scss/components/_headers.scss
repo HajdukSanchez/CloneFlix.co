@@ -11,7 +11,6 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  background-color: $color-bg-ligth;
   box-shadow: .3rem .1rem .9rem .1rem rgba(0, 0, 0, .62);
   &__logo {
     width: 20rem;
@@ -38,7 +37,6 @@
       img {
         padding: .5rem;
         border-radius: 50%;
-        border: .1rem solid $color-border-ligth;
         &:hover {
           @include boxShadowLigth;
         }
@@ -54,8 +52,6 @@
   padding: .5rem 1rem;
   align-items: center;
   border-radius: 2rem;
-  color: $color-text-secundary-ligth;
-  border: .1rem solid $color-border-ligth;
   transition: width .6s; // Re-width time
   form {
     width: 100%;
@@ -66,8 +62,6 @@
     font-family: $font-family;
     border: 0;
     outline: none;
-    background-color: $color-bg-ligth;
-    color: $color-text-secundary-ligth;
   }
   &:hover {
     width: 40rem;

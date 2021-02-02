@@ -1,0 +1,142 @@
+/*************************************************************\
+  Ilumination mode clasess
+\*************************************************************/
+
+.ligth {
+  html::-webkit-scrollbar-track {
+    background: $color-bg-track-slider-ligth;
+  }
+  .navbar {
+    background-color: $color-bg-ligth;
+    &__image {
+      &--arow {
+        img {
+          border: .1rem solid $color-border-ligth;
+        }
+      }
+    }
+  }
+  .search-container {
+    color: $color-text-ligth;
+    border: .1rem solid $color-border-ligth;
+    &__input {
+      background-color: $color-bg-search-ligth;
+      color: $color-text-ligth;
+    }
+  }
+  .slider {
+    background-color: $color-slider-bg-dark;
+    border: .1rem solid $color-border-ligth;
+    &::before {
+      background-color: $color-slider-btn-dark;
+    }
+  }
+  input:checked + .slider {
+    background-color: $color-slider-bg-ligth;
+  }
+  input:checked + .slider::before {
+    background-color: $color-slider-btn-ligth
+  }
+  .btn {
+    &--watch {
+      box-shadow: $shadow-box-movie-ligth;
+    }
+  }
+  .movie-list {
+    background-color: $color-bg-ligth;
+  }
+  .movies {
+    border-top: .2rem solid $color-border-ligth;
+    &__gender-title {
+      background-color: $color-bg-ligth;
+    }
+  }
+  .movie {
+    &__info {
+      h4 {
+        color: $color-bg-ligth;
+      }
+    }
+  }
+  .modal {
+    background-color: $color-bg-ligth;
+    &__item {
+      border-bottom: .1rem solid $color-border-ligth;
+      &:hover {
+        span {
+          color: $color-text-ligth;
+        }
+      }
+    }
+  }
+}
+
+.dark {
+  html::-webkit-scrollbar-track {
+    background: $color-bg-track-slider-dark;
+  }
+  .navbar {
+    background-color: $color-bg-dark;
+    &__image {
+      &--arow {
+        img {
+          border: .1rem solid $color-border-dark;
+        }
+      }
+    }
+  }
+  .search-container {
+    background-color: $color-bg-search-dark;
+    color: $color-text-dark;
+    border: .1rem solid $color-border-dark;
+    &__input {
+      background-color: $color-bg-search-dark;
+      color: $color-text-dark;
+    }
+  }
+  .slider {
+    background-color: $color-slider-bg-dark;
+    border: .1rem solid $color-border-dark;
+    &::before {
+      background-color: $color-slider-btn-dark;
+    }
+  }
+  input:checked + .slider {
+    background-color: $color-slider-bg-dark;
+  }
+  input:checked + .slider::before {
+    background-color: $color-slider-btn-dark
+  }
+  .btn {
+    &--watch {
+      box-shadow: $shadow-box-movie-dark;
+    }
+  }
+  .movie-list {
+    background-color: $color-bg-dark;
+  }
+  .movies {
+    border-top: .2rem solid $color-border-dark;
+    &__gender-title {
+      background-color: $color-bg-dark;
+    }
+  }
+  .movie {
+    &__info {
+      h4 {
+        color: $color-bg-dark;
+      }
+    }
+  }
+  .modal {
+    background-color: $color-bg-ligth;
+    &__item {
+      border-bottom: .1rem solid $color-border-ligth;
+      &:hover {
+        span {
+          color: $color-text-ligth;
+        }
+      }
+    }
+  }
+}
