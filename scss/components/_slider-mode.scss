@@ -18,6 +18,7 @@
     bottom: 0;
     background-color: $color-text-secundary-ligth;
     border: .1rem solid $color-border-ligth;
+    border-radius: 2rem;
     cursor: pointer;
     transition: .4s;
     &::before {

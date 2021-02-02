@@ -188,6 +188,7 @@ body {
   bottom: 0;
   background-color: #6e6e6e;
   border: 0.1rem solid #ececec;
+  border-radius: 2rem;
   cursor: pointer;
   -webkit-transition: .4s;
   transition: .4s;
