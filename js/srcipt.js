@@ -125,6 +125,7 @@
     $body.classList.toggle('dark');
   })
 
+  console.log(getData(API_GENDERS_URL+GENDERS[0]));
   renderPrincipalMovie();
   await renderGendersList();
   setTimeout(() => {
