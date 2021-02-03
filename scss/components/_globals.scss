@@ -43,31 +43,6 @@ body {
   border: 0;
   right: 0;
   transition: .6s ease all;
-
-  // &::-webkit-scrollbar {
-  //   width: 1.3rem;
-  // }
-  // &::-webkit-scrollbar-track {
-  //   background: $color-bg-track-slider-ligth;
-  // }
-  // &.dark::-webkit-scrollbar-track {
-  //   background: $color-bg-track-slider-dark;
-  // }
-
-  // &::-webkit-scrollbar-thumb {
-  //   background: $color-bg-thumb-slider-ligth;
-  //   border-radius: 2rem;
-  // }
-  // &.dark::-webkit-scrollbar-thumb {
-  //   background: $color-bg-thumb-slider-dark;
-  // }
-
-  // &::-webkit-scrollbar-thumb:hover {
-  //   background: $color-bg-thumb-slider-hover-ligth;
-  // }
-  // &.dark::-webkit-scrollbar-thumb:hover {
-  //   background: $color-bg-thumb-slider-hover-dark;
-  // }
 }
 
 .hidden {

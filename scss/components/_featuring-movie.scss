@@ -5,6 +5,7 @@
 .featuring {
   background-color: $color-bg-overlay;
   z-index: 1;
+  transition: .4s;
 
   &__movie {
     position: fixed;
@@ -44,6 +45,7 @@
       align-items: center;
       width: 100%;
       line-height: 3rem;
+      text-align: center;
     }
 
     &--full {
@@ -82,4 +84,21 @@
     width: 100%;
   }
 
+  &__button {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    left: unset;
+    bottom: unset;
+    padding: 1rem;
+    border: 0;
+    border-radius: inherit;
+    outline: none;
+    background-color: $color-btn-watch-bg;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-btn-watch-bg-hover;
+    }
+  }
 }

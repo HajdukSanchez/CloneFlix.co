@@ -592,6 +592,8 @@ body.dark .modal:hover {
 .featuring {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
+  -webkit-transition: .4s;
+  transition: .4s;
 }
 
 .featuring__movie {
@@ -654,6 +656,7 @@ body.dark .featuring__movie {
           align-items: center;
   width: 100%;
   line-height: 3rem;
+  text-align: center;
 }
 
 .featuring__info--full {
@@ -694,4 +697,22 @@ body.dark .featuring__movie {
 
 .featuring__description {
   width: 100%;
+}
+
+.featuring__button {
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  left: unset;
+  bottom: unset;
+  padding: 1rem;
+  border: 0;
+  border-radius: inherit;
+  outline: none;
+  background-color: #eb333e;
+  cursor: pointer;
+}
+
+.featuring__button:hover {
+  background-color: #ca0614;
 }

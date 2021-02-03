@@ -77,34 +77,37 @@
       `<figure class="top-movie__image">
         <img src="${movie.background_image}" alt="Released movie">
       </figure>
-      <div class="top-movie__description overlay" data-id=${movie.id} data-category=${movie.genres[0]}>
-        <h1 class="top-movie__title">${movie.title_english}</h1>
-        <p class="top-movie__info">${movie.synopsis}</p>
-        <button class="btn btn--watch" type="submit">Watch Now</button>
-        <button class="btn btn--info" type="submit">Add to Watchlist</button>
+        <div class="top-movie__description overlay" data-id=${movie.id} data-category=${movie.genres[0]}>
+          <h1 class="top-movie__title">${movie.title_english}</h1>
+          <p class="top-movie__info">${movie.synopsis}</p>
+          <button class="btn btn--watch" type="submit">Watch Now</button>
+          <button class="btn btn--info" type="submit">Add to Watchlist</button>
       </div>`
     );
   }
   function featuringMovieTemplate(movie) {
     return (
       `<div class="featuring__movie hidden" id="movie-search">
-      <div class="featuring__info">
-        <figure class="featuring__image">
-          <img src="${movie.large_cover_image}" alt="Movie image">
-        </figure>
-        <div class="featuring__info--basic">
-          <h1 class="featuring__title">${movie.title_long}</h1>
-          <h2 class="featuring__year">${movie.year}</h2>
-          <h4 class="featuring__rating">${movie.rating}</h4>
-          <h3 class="featuring__gender">${movie.genres[0]}</h3>
+        <button class="featuring__button">
+          <img src="/assets/icon_featuring--close.png" alt="Close button">
+        </button>
+        <div class="featuring__info">
+          <figure class="featuring__image">
+            <img src="${movie.large_cover_image}" alt="Movie image">
+          </figure>
+          <div class="featuring__info--basic">
+            <h1 class="featuring__title">${movie.title_long}</h1>
+            <h2 class="featuring__year">${movie.year}</h2>
+            <h4 class="featuring__rating">${movie.rating}</h4>
+            <h3 class="featuring__gender">${movie.genres[0]}</h3>
+          </div>
         </div>
-      </div>
-      <div class="featuring__info--full">
-        <p class="featuring__description">
-        ${movie.description_full}
-        </p>
-      </div>
-    </div>`
+        <div class="featuring__info--full">
+          <p class="featuring__description">
+          ${movie.description_full}
+          </p>
+        </div>
+      </div>`
     )
   };
   function loaderTempalte() {
