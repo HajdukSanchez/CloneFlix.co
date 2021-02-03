@@ -53,6 +53,10 @@
 
         &:hover {
           @include boxShadowLigth;
+
+          body.dark & {
+            @include boxShadowDark;
+          }
         }
 
         body.dark & {
