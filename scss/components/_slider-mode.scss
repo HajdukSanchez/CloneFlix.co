@@ -7,19 +7,22 @@
   display: inline-block;
   width: 4rem;
   height: 1.5rem;
+
   & input {
     display: none;
   }
+
   .slider {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $color-slider-bg-dark;
+    background-color: $color-text-ligth;
     border-radius: 2rem;
     cursor: pointer;
     transition: .4s;
+
     &::before {
       content: "";
       position: absolute;
@@ -31,6 +34,11 @@
       transition: .4s;
     }
   }
+
+  input:checked + .slider {
+    background-color: $color-border-ligth;
+  }
+
   input:checked + .slider::before {
     transform: translateX(2.5rem);
   }

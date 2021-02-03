@@ -8,13 +8,20 @@
   right: 2rem;
   margin-right: 2rem;
   padding: 1rem 2rem;
-  border-radius: $border-radius-modal;
+  background-color: $color-bg-ligth;
+  border-radius: $border-radius-movie-box;
   font-family: $font-family;
   transition: .4s;
+
+  body.dark & {
+    background-color: $color-bg-dark;
+  }
+
   &__list {
     font-size: font-size();
     list-style: none;
   }
+
   &__item {
     display: flex;
     align-items: center;
@@ -22,10 +29,32 @@
     padding: 1rem 0;
     cursor: pointer;
     transition: .4s;
+
+    body.dark & {
+      border-bottom-color: $color-border-dark;
+    }
+
     span {
       padding-left: 1rem;
     }
+
+    &:hover{
+      border-bottom: .1rem solid $color-text-ligth;
+
+      body.dark & {
+        border-bottom-color: $color-text-dark;
+      }
+
+      span {
+        color: $color-text-ligth;
+
+        body.dark & {
+          color: $color-text-dark;
+        }
+      }
+    }
   }
+
   &:hover {
     @include boxShadowLigth;
   }
