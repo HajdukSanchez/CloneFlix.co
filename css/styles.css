@@ -43,8 +43,8 @@ body {
   top: 0;
   border: 0;
   right: 0;
-  -webkit-transition: .4s ease all;
-  transition: .4s ease all;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 body::-webkit-scrollbar {
@@ -246,8 +246,8 @@ body.dark .search-container:hover {
   background-color: #6e6e6e;
   border-radius: 2rem;
   cursor: pointer;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .switch .slider::before {
@@ -258,8 +258,8 @@ body.dark .search-container:hover {
   height: 2rem;
   background-color: #ca0614;
   border-radius: inherit;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .switch input:checked + .slider {
