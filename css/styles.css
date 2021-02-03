@@ -8,6 +8,15 @@
 /*************************************************************\
   Variables
 \*************************************************************/
+/* ***********************************************
+  Globals
+*********************************************** */
+/* ***********************************************
+  Ligth
+*********************************************** */
+/* ***********************************************
+  Dark
+*********************************************** */
 /*************************************************************\
   Mixins
 \*************************************************************/
@@ -29,28 +38,40 @@ html {
   font-size: 62.5%;
 }
 
-html::-webkit-scrollbar {
-  width: 1.3rem;
-}
-
-html::-webkit-scrollbar-track {
-  background: #ececec;
-}
-
-html::-webkit-scrollbar-thumb {
-  background: #c8c8c8;
-  border-radius: 2rem;
-}
-
-html::-webkit-scrollbar-thumb:hover {
-  background: #888888;
-}
-
 body {
   position: absolute;
   top: 0;
   border: 0;
   right: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #ececec;
+}
+
+body.dark::-webkit-scrollbar-track {
+  background: #566169;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+  border-radius: 2rem;
+}
+
+body.dark::-webkit-scrollbar-thumb {
+  background: #3f474d;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
+
+body.dark::-webkit-scrollbar-thumb:hover {
+  background: #2a3238;
 }
 
 .hidden {
@@ -85,6 +106,10 @@ body {
   background-color: #fbfbfb;
   -webkit-box-shadow: 0.3rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.62);
           box-shadow: 0.3rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.62);
+}
+
+body.dark .navbar {
+  background-color: #18191a;
 }
 
 .navbar__logo {
@@ -128,6 +153,10 @@ body {
           box-shadow: 0 0.1rem 0.6rem 0 #20212447;
 }
 
+body.dark .navbar__image--arrow img {
+  border: #3a3b3c;
+}
+
 .search-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,10 +168,24 @@ body {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 2rem;
+  background-color: #fbfbfb;
   color: #6e6e6e;
   border: 0.1rem solid #ececec;
   -webkit-transition: width .6s;
   transition: width .6s;
+}
+
+body.dark .search-container {
+  background-color: #3a3b3c;
+  color: #b0b3b8;
+  border-color: #3a3b3c;
+}
+
+.search-container:hover {
+  width: 40rem;
+  border-color: #dfe1e500;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
 }
 
 .search-container form {
@@ -159,11 +202,9 @@ body {
   color: #6e6e6e;
 }
 
-.search-container:hover {
-  width: 40rem;
-  border-color: #dfe1e500;
-  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
-          box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+body.dark .search-container__input {
+  background-color: #3a3b3c;
+  color: #b0b3b8;
 }
 
 /*************************************************************\
@@ -187,7 +228,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: #6e6e6e;
-  border: 0.1rem solid #ececec;
+  border-radius: 2rem;
   cursor: pointer;
   -webkit-transition: .4s;
   transition: .4s;
@@ -237,8 +278,13 @@ body {
 
 .top-movie__description {
   padding: 0 11rem;
-  background-color: rgba(0, 0, 0, 0.3);
   font-family: Helvetica, arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #6e6e6e;
+}
+
+body.dark .top-movie__description {
+  color: #b0b3b8;
 }
 
 .top-movie__title {
@@ -252,7 +298,7 @@ body {
   width: 45%;
   padding-bottom: 3rem;
   font-size: 1.8rem;
-  color: white;
+  color: #fdfdfd;
 }
 
 .btn {
@@ -267,8 +313,8 @@ body {
 }
 
 .btn--watch {
-  background-color: #eb333e;
   border: 0;
+  background-color: #eb333e;
   -webkit-box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
           box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
 }
@@ -277,6 +323,11 @@ body {
   background-color: #ca0614;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+body.dark .btn--watch {
+  -webkit-box-shadow: -1px 2px 59px -5px #e4e6eb;
+          box-shadow: -1px 2px 59px -5px #e4e6eb;
 }
 
 .btn--info {
@@ -316,11 +367,19 @@ body {
   background-color: #fbfbfb;
 }
 
+body.dark .movie-list {
+  background-color: #18191a;
+}
+
 .movies {
   position: relative;
   padding-top: 1rem;
   margin-bottom: 3rem;
   border-top: 0.2rem solid #ececec;
+}
+
+body.dark .movies {
+  border-top-color: #3a3b3c;
 }
 
 .movies__gender-title {
@@ -331,6 +390,12 @@ body {
   font-family: Helvetica, arial, sans-serif;
   font-size: 1.6rem;
   background-color: #fbfbfb;
+  color: #6e6e6e;
+}
+
+body.dark .movies__gender-title {
+  background-color: #18191a;
+  color: #b0b3b8;
 }
 
 .movies__container {
@@ -343,9 +408,6 @@ body {
   background-color: transparent;
   border-radius: 2rem;
   overflow-x: auto;
-  /* Track */
-  /* Handle */
-  /* Handle on hover */
 }
 
 .movies__container::-webkit-scrollbar {
@@ -357,13 +419,25 @@ body {
   border-radius: 2rem;
 }
 
+body.dark .movies__container::-webkit-scrollbar-track {
+  background: #566169;
+}
+
 .movies__container::-webkit-scrollbar-thumb {
   background: #c8c8c8;
   border-radius: 2rem;
 }
 
+body.dark .movies__container::-webkit-scrollbar-thumb {
+  background: #3f474d;
+}
+
 .movies__container::-webkit-scrollbar-thumb:hover {
   background: #888888;
+}
+
+body.dark .movies__container::-webkit-scrollbar-thumb:hover {
+  background: #2a3238;
 }
 
 .movie {
@@ -426,6 +500,10 @@ body {
   color: #fbfbfb;
 }
 
+body.dark .movie__info h4 {
+  color: #18191a;
+}
+
 .movie:hover .movie__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,6 +530,10 @@ body {
   transition: .4s;
 }
 
+body.dark .modal {
+  background-color: #18191a;
+}
+
 .modal__list {
   font-size: 1.6rem;
   list-style: none;
@@ -472,16 +554,28 @@ body {
   transition: .4s;
 }
 
+body.dark .modal__item {
+  border-bottom-color: #3a3b3c;
+}
+
 .modal__item span {
   padding-left: 1rem;
 }
 
 .modal__item:hover {
-  border-bottom: 0.1rem solid #393939;
+  border-bottom: 0.1rem solid #6e6e6e;
+}
+
+body.dark .modal__item:hover {
+  border-bottom-color: #b0b3b8;
 }
 
 .modal__item:hover span {
   color: #6e6e6e;
+}
+
+body.dark .modal__item:hover span {
+  color: #b0b3b8;
 }
 
 .modal:hover {

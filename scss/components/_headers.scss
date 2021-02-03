@@ -13,6 +13,11 @@
   top: 0;
   background-color: $color-bg-ligth;
   box-shadow: .3rem .1rem .9rem .1rem rgba(0, 0, 0, .62);
+
+  body.dark & {
+    background-color: $color-bg-dark;
+  }
+
   &__logo {
     width: 20rem;
     margin-right: 3rem;
@@ -20,27 +25,38 @@
       width: 100%;
     }
   }
+
   &__menu {
     display: flex;
     justify-self: end;
     align-items: center;
   }
+
   &__image {
     width: 2rem;
     margin-right: 3rem;
     cursor: pointer;
+
     &--profile {
+
       img {
         border-radius: 50%;
       }
     }
+
     &--arrow {
+
       img {
         padding: .5rem;
         border-radius: 50%;
         border: .1rem solid $color-border-ligth;
+
         &:hover {
           @include boxShadowLigth;
+        }
+
+        body.dark & {
+          border: $color-border-dark;
         }
       }
     }
@@ -54,23 +70,39 @@
   padding: .5rem 1rem;
   align-items: center;
   border-radius: 2rem;
-  color: $color-text-secundary-ligth;
+  background-color: $color-bg-search-ligth;
+  color: $color-text-ligth;
   border: .1rem solid $color-border-ligth;
   transition: width .6s; // Re-width time
+
+  body.dark & {
+    background-color: $color-bg-search-dark;
+    color: $color-text-dark;
+    border-color: $color-border-dark;
+  }
+
+  &:hover {
+    width: 40rem;
+    @include boxShadowLigth;
+  }
+
   form {
     width: 100%;
     padding-left: 1rem;
   }
+
   &__input {
     width: 100%;
     font-family: $font-family;
     border: 0;
     outline: none;
-    background-color: $color-bg-ligth;
-    color: $color-text-secundary-ligth;
+    background-color: $color-bg-search-ligth;
+    color: $color-text-ligth;
+
+    body.dark & {
+      background-color: $color-bg-search-dark;
+      color: $color-text-dark;
+    }
   }
-  &:hover {
-    width: 40rem;
-    @include boxShadowLigth;
-  }
+
 }
