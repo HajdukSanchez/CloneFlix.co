@@ -21,7 +21,7 @@
     background-color: $color-text-ligth;
     border-radius: 2rem;
     cursor: pointer;
-    transition: .4s;
+    transition: .6s;
 
     &::before {
       content: "";
@@ -31,7 +31,7 @@
       height: 2rem;
       background-color: $color-slider-btn-dark;
       border-radius: inherit;
-      transition: .4s;
+      transition: .6s;
     }
   }
 

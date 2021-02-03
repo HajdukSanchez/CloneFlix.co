@@ -19,6 +19,10 @@
   const $menu = document.getElementById('menu');
   // Modal menu
   const $modal_menu = document.getElementById('modal-menu');
+  // Toogle dark mode
+  const $toogle = document.getElementById('toogle');
+  // Body
+  const $body = document.querySelector('body');
 
 
   // Funtion to get data for the API
@@ -114,6 +118,11 @@
     } else {
       $modal_menu.classList.add('hidden');
     }
+  })
+
+  // Dark mode
+  $toogle.addEventListener('change', () => {
+    $body.classList.toggle('dark');
   })
 
   renderPrincipalMovie();
