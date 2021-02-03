@@ -3,8 +3,20 @@
 \*************************************************************/
 
 .ligth {
-  html::-webkit-scrollbar-track {
-    background: $color-bg-track-slider-ligth;
+  html{
+    &::-webkit-scrollbar-track {
+      background: $color-bg-track-slider-ligth;
+    }
+    &::-webkit-scrollbar {
+      width: 1.3rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-bg-thumb-slider-ligth;
+      border-radius: 2rem;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $color-bg-thumb-slider-hover-ligth;
+    }
   }
   .navbar {
     background-color: $color-bg-ligth;
@@ -72,8 +84,20 @@
 }
 
 .dark {
-  html::-webkit-scrollbar-track {
-    background: $color-bg-track-slider-dark;
+  html {
+    &::-webkit-scrollbar-track {
+      background: $color-bg-track-slider-dark;
+    }
+    &::-webkit-scrollbar {
+      width: 1.3rem;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $color-bg-thumb-slider-dark;
+      border-radius: 2rem;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: $color-bg-thumb-slider-hover-dark;
+    }
   }
   .navbar {
     background-color: $color-bg-dark;
