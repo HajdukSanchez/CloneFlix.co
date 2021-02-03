@@ -36,6 +36,10 @@
 
     span {
       padding-left: 1rem;
+
+      body.dark & {
+        color: $color-text-ligth;
+      }
     }
 
     &:hover{
@@ -57,5 +61,9 @@
 
   &:hover {
     @include boxShadowLigth;
+
+    body.dark & {
+      @include boxShadowDark;
+    }
   }
 }

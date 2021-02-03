@@ -24,180 +24,6 @@
   Functions
 \*************************************************************/
 /*************************************************************\
-  Ilumination mode clasess
-\*************************************************************/
-.ligth html::-webkit-scrollbar-track {
-  background: #ececec;
-}
-
-.ligth html::-webkit-scrollbar {
-  width: 1.3rem;
-}
-
-.ligth html::-webkit-scrollbar-thumb {
-  background: #c8c8c8;
-  border-radius: 2rem;
-}
-
-.ligth html::-webkit-scrollbar-thumb:hover {
-  background: #888888;
-}
-
-.ligth .navbar {
-  background-color: #fbfbfb;
-}
-
-.ligth .navbar__image--arow img {
-  border: 0.1rem solid #ececec;
-}
-
-.ligth .search-container {
-  color: #6e6e6e;
-  border: 0.1rem solid #ececec;
-}
-
-.ligth .search-container__input {
-  background-color: #fbfbfb;
-  color: #6e6e6e;
-}
-
-.ligth .slider {
-  background-color: #6e6e6e;
-  border: 0.1rem solid #ececec;
-}
-
-.ligth .slider::before {
-  background-color: #ca0614;
-}
-
-.ligth input:checked + .slider {
-  background-color: #ececec;
-}
-
-.ligth input:checked + .slider::before {
-  background-color: #eb333e;
-}
-
-.ligth .btn--watch {
-  -webkit-box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
-          box-shadow: -1px 2px 59px -5px rgba(0, 0, 0, 0.77);
-}
-
-.ligth .movie-list {
-  background-color: #fbfbfb;
-}
-
-.ligth .movies {
-  border-top: 0.2rem solid #ececec;
-}
-
-.ligth .movies__gender-title {
-  background-color: #fbfbfb;
-}
-
-.ligth .movie__info h4 {
-  color: #fbfbfb;
-}
-
-.ligth .modal {
-  background-color: #fbfbfb;
-}
-
-.ligth .modal__item {
-  border-bottom: 0.1rem solid #ececec;
-}
-
-.ligth .modal__item:hover span {
-  color: #6e6e6e;
-}
-
-.dark html::-webkit-scrollbar-track {
-  background: #566169;
-}
-
-.dark html::-webkit-scrollbar {
-  width: 1.3rem;
-}
-
-.dark html::-webkit-scrollbar-thumb {
-  background: #3f474d;
-  border-radius: 2rem;
-}
-
-.dark html::-webkit-scrollbar-thumb:hover {
-  background: #2a3238;
-}
-
-.dark .navbar {
-  background-color: #18191a;
-}
-
-.dark .navbar__image--arow img {
-  border: 0.1rem solid #3a3b3c;
-}
-
-.dark .search-container {
-  background-color: #3a3b3c;
-  color: #b0b3b8;
-  border: 0.1rem solid #3a3b3c;
-}
-
-.dark .search-container__input {
-  background-color: #3a3b3c;
-  color: #b0b3b8;
-}
-
-.dark .slider {
-  background-color: #6e6e6e;
-  border: 0.1rem solid #3a3b3c;
-}
-
-.dark .slider::before {
-  background-color: #ca0614;
-}
-
-.dark input:checked + .slider {
-  background-color: #6e6e6e;
-}
-
-.dark input:checked + .slider::before {
-  background-color: #ca0614;
-}
-
-.dark .btn--watch {
-  -webkit-box-shadow: -1px 2px 59px -5px #e4e6eb;
-          box-shadow: -1px 2px 59px -5px #e4e6eb;
-}
-
-.dark .movie-list {
-  background-color: #18191a;
-}
-
-.dark .movies {
-  border-top: 0.2rem solid #3a3b3c;
-}
-
-.dark .movies__gender-title {
-  background-color: #18191a;
-}
-
-.dark .movie__info h4 {
-  color: #18191a;
-}
-
-.dark .modal {
-  background-color: #fbfbfb;
-}
-
-.dark .modal__item {
-  border-bottom: 0.1rem solid #ececec;
-}
-
-.dark .modal__item:hover span {
-  color: #6e6e6e;
-}
-
-/*************************************************************\
   Globals
 \*************************************************************/
 /* Developed by Jozek Andrzej Hajduk Sánchez */
@@ -378,6 +204,10 @@ body.dark .search-container {
   color: #6e6e6e;
 }
 
+body.dark .search-container__input {
+  background-color: #3a3b3c;
+}
+
 .search-container:hover {
   width: 40rem;
   border-color: #dfe1e500;
@@ -388,6 +218,9 @@ body.dark .search-container {
 body.dark .search-container:hover {
   background-color: #3a3b3c;
   color: #b0b3b8;
+  border-color: #ffffff3d;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #570d0d;
+          box-shadow: 0 0.1rem 0.6rem 0 #570d0d;
 }
 
 /*************************************************************\
@@ -682,10 +515,6 @@ body.dark .movies__container::-webkit-scrollbar-thumb:hover {
   color: #fbfbfb;
 }
 
-body.dark .movie__info h4 {
-  color: #18191a;
-}
-
 .movie:hover .movie__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -743,6 +572,10 @@ body.dark .modal__item {
   padding-left: 1rem;
 }
 
+body.dark .modal__item span {
+  color: #6e6e6e;
+}
+
 .modal__item:hover {
   border-bottom: 0.1rem solid #6e6e6e;
 }
@@ -763,4 +596,10 @@ body.dark .modal__item:hover span {
   border-color: #dfe1e500;
   -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
           box-shadow: 0 0.1rem 0.6rem 0 #20212447;
+}
+
+body.dark .modal:hover {
+  border-color: #ffffff3d;
+  -webkit-box-shadow: 0 0.1rem 0.6rem 0 #570d0d;
+          box-shadow: 0 0.1rem 0.6rem 0 #570d0d;
 }

@@ -98,6 +98,10 @@
     outline: none;
     background-color: $color-bg-search-ligth;
     color: $color-text-ligth;
+
+    body.dark & {
+      background-color: $color-bg-search-dark;
+    }
   }
   &:hover {
     width: 40rem;
@@ -106,6 +110,7 @@
     body.dark & {
       background-color: $color-bg-search-dark;
       color: $color-text-dark;
+      @include boxShadowDark;
     }
   }
 

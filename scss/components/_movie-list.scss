@@ -123,10 +123,6 @@
       font-family: $font-family;
       text-align: center;
       color: $color-bg-ligth;
-
-      body.dark & {
-        color: $color-bg-dark;
-      }
     }
   }
 
