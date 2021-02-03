@@ -281,6 +281,7 @@ body.dark::-webkit-scrollbar-thumb:hover {
   top: 0;
   -webkit-box-shadow: 0.3rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.62);
           box-shadow: 0.3rem 0.1rem 0.9rem 0.1rem rgba(0, 0, 0, 0.62);
+  background-color: #fbfbfb;
 }
 
 body.dark .navbar {
@@ -373,6 +374,8 @@ body.dark .search-container {
   font-family: Helvetica, arial, sans-serif;
   border: 0;
   outline: none;
+  background-color: #fbfbfb;
+  color: #6e6e6e;
 }
 
 .search-container:hover {
@@ -380,8 +383,6 @@ body.dark .search-container {
   border-color: #dfe1e500;
   -webkit-box-shadow: 0 0.1rem 0.6rem 0 #20212447;
           box-shadow: 0 0.1rem 0.6rem 0 #20212447;
-  background-color: #fbfbfb;
-  color: #6e6e6e;
 }
 
 body.dark .search-container:hover {

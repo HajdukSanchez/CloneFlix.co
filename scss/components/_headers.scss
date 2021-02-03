@@ -12,6 +12,7 @@
   z-index: 1;
   top: 0;
   box-shadow: .3rem .1rem .9rem .1rem rgba(0, 0, 0, .62);
+  background-color: $color-bg-ligth;
 
   body.dark & {
     background-color: $color-bg-dark;
@@ -95,12 +96,12 @@
     font-family: $font-family;
     border: 0;
     outline: none;
+    background-color: $color-bg-search-ligth;
+    color: $color-text-ligth;
   }
   &:hover {
     width: 40rem;
     @include boxShadowLigth;
-    background-color: $color-bg-search-ligth;
-    color: $color-text-ligth;
 
     body.dark & {
       background-color: $color-bg-search-dark;
