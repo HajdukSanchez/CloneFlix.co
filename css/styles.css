@@ -368,14 +368,15 @@ body.dark .btn--watch {
   Loadings Gif
 \*************************************************************/
 .loading {
-  position: relative;
+  position: -webkit-sticky;
+  position: sticky;
   top: 50vh;
   width: 100%;
   text-align: center;
 }
 
 .loading__icon {
-  width: 7rem;
+  width: 5rem;
 }
 
 /*************************************************************\

@@ -9,10 +9,12 @@
   const API_GENDERS_URL = 'https://yts.mx/api/v2/list_movies.json?limit=50&genre=';
   // Link for movie suggestion
   const API_MOVIE_SUGGESTION = 'https://yts.mx/api/v2/movie_suggestions.json?movie_id=';
+  // Link movie search
+  const API_MOVIE_SEARCH = 'https://yts.mx/api/v2/list_movies.json?limit=!&query_term=';
   // Movies lists container
   const $movies_list_container = document.getElementById('movies-list');
   // Loading Gif
-  const $loading = document.getElementById('loading');
+  // const $loading = document.getElementById('loading');
   // Principal movie
   const $main_movie_container = document.getElementById('main-movie');
   // Menu button
@@ -23,7 +25,10 @@
   const $toogle = document.getElementById('toogle');
   // Body
   const $body = document.querySelector('body');
-
+  // Featuring
+  const $featuring = document.getElementById('featuring');
+  // Form
+  const $form = document.getElementById('form');
 
   // Funtion to get data for the API
   async function getData(url) {
@@ -80,6 +85,36 @@
       </div>`
     );
   }
+  function featuringMovieTemplate(movie) {
+    return (
+      `<div class="featuring__movie hidden" id="movie-search">
+      <div class="featuring__info">
+        <figure class="featuring__image">
+          <img src="${movie.large_cover_image}" alt="Movie image">
+        </figure>
+        <div class="featuring__info--basic">
+          <h1 class="featuring__title">${movie.title_long}</h1>
+          <h2 class="featuring__year">${movie.year}</h2>
+          <h4 class="featuring__rating">${movie.rating}</h4>
+          <h3 class="featuring__gender">${movie.genres[0]}</h3>
+        </div>
+      </div>
+      <div class="featuring__info--full">
+        <p class="featuring__description">
+        ${movie.description_full}
+        </p>
+      </div>
+    </div>`
+    )
+  };
+  function loaderTempalte() {
+    return (
+      `<figure class="loading" id="loading">
+        <img src="https://www.daevi.net/wp-content/plugins/bbpowerpack/assets/images/spinner.gif" alt="Loading Icon" class="loading__icon">
+      </figure>`
+    )
+  }
+
   // Render the movies for the genders
   async function renderGendersList() {
     GENDERS.forEach( gender => {
@@ -125,12 +160,31 @@
     $body.classList.toggle('dark');
   })
 
+  // Search input result
+  $form.addEventListener('submit',async (event) => {
+    event.preventDefault();
+    $featuring.classList.remove('hidden');
+    $featuring.innerHTML += loaderTempalte();
+    const data = new FormData($form);
+    try {
+      const {data:{movies: movie}} = await getData(`${API_MOVIE_SEARCH}${data.get('movie-search')}`);
+      const HTMLMovieSearch = featuringMovieTemplate(movie[0]);
+      if (HTMLMovieSearch) {
+        setTimeout(() => {
+          $featuring.innerHTML += HTMLMovieSearch;
+        }, 3000);
+      }
+    } catch (error) {
+      alert('No result ...');
+      data.get('movie-search').clear;
+      $featuring.classList.add('hidden');
+    }
+  });
+
   console.log(getData(API_GENDERS_URL+GENDERS[0]));
   renderPrincipalMovie();
   await renderGendersList();
   setTimeout(() => {
-    // Hide loading gif and show movies
-    $loading.classList.add('hidden');
     $movies_list_container.classList.remove('hidden');
   }, 3000);
 })()
