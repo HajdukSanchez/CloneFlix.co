@@ -59,15 +59,15 @@ function principalMovieTemplate(movie) {
       <div class="top-movie__description overlay" data-id=${movie.id} data-category=${movie.genres[0]}>
         <h1 class="top-movie__title">${movie.title_english}</h1>
         <p class="top-movie__info">${movie.synopsis}</p>
-        <button class="btn btn--watch" type="submit">Watch Now</button>
-        <button class="btn btn--info" type="submit">Add to Watchlist</button>
+        <button class="btn btn--watch" type="submit" disabled>Watch Now</button>
+        <button class="btn btn--info" type="submit" disabled>About it</button>
     </div>`
   );
 }
 function featuringMovieTemplate(movie) {
   return (
     `<div class="featuring__movie hidden" id="movie-search">
-      <button class="featuring__button" id="button-featuring">
+      <button class="featuring__button" id="button-featuring" onclick="hideModal()">
         <img src="/assets/icon_featuring--close.png" alt="Close button">
       </button>
       <div class="featuring__info">
@@ -122,6 +122,15 @@ function showModal(id, category) {
   }
 }
 
+// Hide Modal
+function hideModal() {
+  // Remove the childrens inside modal featurig movie
+  while ($featuring.hasChildNodes()) {
+    $featuring.removeChild($featuring.firstChild);
+  }
+  $featuring.classList.add('hidden');
+}
+
 // For show modal
 $menu.addEventListener('click', () => {
   if ($modal_menu.classList.contains('hidden')) {
@@ -129,27 +138,11 @@ $menu.addEventListener('click', () => {
   } else {
     $modal_menu.classList.add('hidden');
   }
-})
+});
 
- // Dark mode
- $toogle.addEventListener('change', () => {
+// Dark mode
+$toogle.addEventListener('change', () => {
   $body.classList.toggle('dark');
-})
-
-// Search input result
-$form.addEventListener('submit',async (event) => {
-  event.preventDefault();
-  const data = new FormData($form);
-  try {
-    const {data:{movies: movie}} = await getData(`${API_MOVIE_SEARCH}${data.get('movie-search')}`);
-    if (movie) {
-      showFeaturing(movie[0]);
-    }
-  } catch (error) {
-    alert('No result ...');
-    data.get('movie-search').clear;
-    $featuring.classList.add('hidden');
-  }
 });
 
 // Function when the page is loaded
@@ -206,6 +199,22 @@ $form.addEventListener('submit',async (event) => {
     const HTMLMainMovie = principalMovieTemplate(data[aleatoryNumber(0, data.length)]);
     $main_movie_container.innerHTML += HTMLMainMovie;
   }
+
+  // Search input result
+  $form.addEventListener('submit',async (event) => {
+    event.preventDefault();
+    const data = new FormData($form);
+    try {
+      const {data:{movies: movie}} = await getData(`${API_MOVIE_SEARCH}${data.get('movie-search')}`);
+      console.log(movie);
+      if (movie) {
+        showFeaturing(movie[0]);
+      }
+    } catch (error) {
+      alert('No result ...');
+      $featuring.classList.add('hidden');
+    }
+  });
 
   renderPrincipalMovie();
   await renderGendersList();

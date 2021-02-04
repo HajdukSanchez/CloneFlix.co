@@ -437,6 +437,32 @@ body.dark .movies__gender-title {
   height: 0.5rem;
 }
 
+.movies__container::-webkit-scrollbar-track {
+  background: #ececec;
+  border-radius: 2rem;
+}
+
+body.dark .movies__container::-webkit-scrollbar-track {
+  background: #566169;
+}
+
+.movies__container::-webkit-scrollbar-thumb {
+  background: #c8c8c8;
+  border-radius: 2rem;
+}
+
+body.dark .movies__container::-webkit-scrollbar-thumb {
+  background: #3f474d;
+}
+
+.movies__container::-webkit-scrollbar-thumb:hover {
+  background: #888888;
+}
+
+body.dark .movies__container::-webkit-scrollbar-thumb:hover {
+  background: #2a3238;
+}
+
 .movie {
   margin-right: 2rem;
   position: relative;
