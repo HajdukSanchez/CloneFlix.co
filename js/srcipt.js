@@ -10,8 +10,6 @@ const API_MOVIE_SUGGESTION = 'https://yts.mx/api/v2/movie_suggestions.json?movie
 const API_MOVIE_SEARCH = 'https://yts.mx/api/v2/list_movies.json?limit=!&query_term=';
 // Movies lists container
 const $movies_list_container = document.getElementById('movies-list');
-// Loading Gif
-// const $loading = document.getElementById('loading');
 // Principal movie
 const $main_movie_container = document.getElementById('main-movie');
 // Menu button
@@ -21,7 +19,7 @@ const $modal_menu = document.getElementById('modal-menu');
 // Toogle dark mode
 const $toogle = document.getElementById('toogle');
 // Body
-const $body = document.querySelector('body');
+const $body = document.getElementById('body');
 // Featuring
 const $featuring = document.getElementById('featuring');
 // Form
@@ -41,10 +39,10 @@ function listTemplate(category) {
 function movieTemplate(movie, category) {
   return (
     `<figure class="movie" data-id=${movie.id} data-category=${category} onclick="showModal(this.dataset.id, this.dataset.category)">
-      <img src="${movie.large_cover_image}" alt="Movie">
+      <img src="${movie.large_cover_image}" alt="${movie.title} cover">
       <div class="overlay movie__info">
         <button class="btn--info" title="Movie information">
-          <img src="/assets/icon_movie__info.png" alt="Information about the movie">
+          <img src="/assets/icon_movie__info.png" alt="${movie.title} Information">
         </button>
         <h4>${movie.title_english}</h4>
       </div>
@@ -72,7 +70,7 @@ function featuringMovieTemplate(movie) {
       </button>
       <div class="featuring__info">
         <figure class="featuring__image">
-          <img src="${movie.large_cover_image}" alt="Movie image">
+          <img src="${movie.large_cover_image}" alt="${movie.title} cover">
         </figure>
         <div class="featuring__info--basic">
           <h1 class="featuring__title">${movie.title_long}</h1>
@@ -216,9 +214,14 @@ $toogle.addEventListener('change', () => {
     }
   });
 
-  renderPrincipalMovie();
+  console.log(getData(`${API_GENDERS_URL}${GENDERS[0]}`));
+
+  // Hide main movie container
+  $main_movie_container.classList.add('hidden');
+  await renderPrincipalMovie();
   await renderGendersList();
   setTimeout(() => {
+    $main_movie_container.classList.remove('hidden');
     $movies_list_container.classList.remove('hidden');
   }, 3000);
 })()
