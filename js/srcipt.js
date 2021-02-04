@@ -42,7 +42,7 @@ function movieTemplate(movie, category) {
       <img src="${movie.large_cover_image}" alt="${movie.title} cover">
       <div class="overlay movie__info">
         <button class="btn--info" title="Movie information">
-          <img src="/assets/icon_movie__info.png" alt="${movie.title} Information">
+          <img src="./../assets/icon_movie__info.png" alt="${movie.title} Information">
         </button>
         <h4>${movie.title_english}</h4>
       </div>
@@ -66,7 +66,7 @@ function featuringMovieTemplate(movie) {
   return (
     `<div class="featuring__movie hidden" id="movie-search">
       <button class="featuring__button" id="button-featuring" onclick="hideModal()">
-        <img src="/assets/icon_featuring--close.png" alt="Close button">
+        <img src="./../assets/icon_featuring--close.png" alt="Close button">
       </button>
       <div class="featuring__info">
         <figure class="featuring__image">
