@@ -1,0 +1,45 @@
+/*************************************************************\
+  Slider ilumitaion mode
+\*************************************************************/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4rem;
+  height: 1.5rem;
+
+  & input {
+    display: none;
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-text-ligth;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: .6s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -.3rem;
+      width: 2rem;
+      height: 2rem;
+      background-color: $color-slider-btn-dark;
+      border-radius: inherit;
+      transition: .6s;
+    }
+  }
+
+  input:checked + .slider {
+    background-color: $color-border-ligth;
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(2.5rem);
+  }
+}

@@ -8,13 +8,14 @@
     <title>Home | CloneFlix</title>
     <link rel="stylesheet" href="/css/styles.css">
   </head>
-  <body>
+  <body id="body">
     <!-- Header section -->
     <header class="navbar">
       <figure class="navbar__logo"><img src="https://fontmeme.com/permalink/210127/bc974caa36cb1a9d14685d59a28594c3.png" alt="Logo"></figure>
       <div class="slidebar">
-        <label for="ilumination-mode" class="btn-switch">
-          <input type="checkbox" name="ilumination-mode"><span class="slide round"></span>
+        <label class="switch">
+          <input type="checkbox" checked id="toogle">
+          <span class="slider"></span>
         </label>
       </div>
       <div class="search-container"><span class="search-container__icon"><img src="/assets/icono_search.png" alt="Search icon"></span>
@@ -24,9 +25,9 @@
       </div>
       <div class="navbar__menu">
         <figure class="navbar__image navbar__image--profile"><img src="https://lh3.googleusercontent.com/ogw/ADGmqu_oESw-R4r2HrlxwyeTwDT2VhuBAYdX1PVQKtiuJzI=s32-c-mo" alt="Profile icon"></figure>
-        <figure class="navbar__image navbar__image--arrow"><img src="/assets/icon-menu.png" alt="Menu"></figure>
+        <figure class="navbar__image navbar__image--arrow" id="menu"><img src="/assets/icon-menu.png" alt="Menu"></figure>
         <!-- Modal nav bar menu -->
-        <div class="modal hidden">
+        <div class="modal hidden" id="modal-menu">
           <ul class="modal__list">
             <li class="modal__item"><img src="/assets/icon_modal--settings.png" alt="Icon Account settings"><span>Account settings</span></li>
             <li class="modal__item"><img src="/assets/icon_modal--Notification.png" alt="Icon Notifications"><span>Notifications</span></li>
@@ -39,13 +40,14 @@
     <main class="top-movie" id="main-movie">
       <!-- Principal Movie -->
     </main>
-    <!-- Loading division -->
-    <figure class="loading" id="loading">
-      <img src="https://www.daevi.net/wp-content/plugins/bbpowerpack/assets/images/spinner.gif" alt="Loading Icon" class="loading__icon">
-    </figure>
+    <!-- Loading gif -->
     <!-- Movie list section -->
-    <section class="movie-list hidden" id="movies-list">
+    <section class="movie-list" id="movies-list">
       <!-- Genders list here -->
+    </section>
+    <!-- Overlay featuring movie -->
+    <section class="featuring overlay hidden" id="featuring">
+      <!-- Movie featuring here -->
     </section>
     <script src="/js/srcipt.js"></script>
   </body>

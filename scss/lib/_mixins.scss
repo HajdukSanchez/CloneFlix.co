@@ -4,5 +4,10 @@
 
 @mixin boxShadowLigth {
   border-color: #dfe1e500;
-  box-shadow: $search-box-shadow;
+  box-shadow: $shadow-box-search-ligth;
+}
+
+@mixin boxShadowDark {
+  border-color: #ffffff3d;
+  box-shadow: $shadow-box-search-dark;
 }
